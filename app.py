@@ -127,7 +127,7 @@ def delete_actor(actor_id):
     if not actor:
         return jsonify({'error': 'Actor not found'}), 404
     
-    if actor.movies:
+    if Actor.query.filter_by(id=actor_id).join(movie_actor).count() > 0:
         return jsonify({'error': 'Actor is associated with movies. Cannot delete.'}), 400
 
     # If the actor is not associated with any movies, delete the actor
