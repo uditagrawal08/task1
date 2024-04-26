@@ -1,5 +1,4 @@
-# Movie Database API
-
+# Task given by 10XEngg
 This is a simple backend API along with the backend database schema for managing a movie database.
 
 ## Prerequisites
